@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        onchange : thay đổi giá trị trong input form 
+        khi nhập xong và bỏ chuột ra khỏi input
+    </pre>
+    <form action="">
+        <p>
+            <label>Nhap username</label>
+            <input onchange="demoChangeInput()" onkeydown="demoKeyDown()" type="text" name="usename" id="username" value=""/>
+        </p>
+        <p style="color:red" id="showUserName"></p>
+    </form>
+
+    <script>
+        function demoChangeInput(){
+            let username = document.getElementById('username').value;
+            document.getElementById('showUserName').innerHTML = usename;
+                    }
+        
+        function demoKeyDown(){
+            let username = document.getElementById('username').value;
+                console.log(username);
+                
+        }
+    </script>
+</body>
+</html>

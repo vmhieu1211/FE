@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        https://www.w3schools.com/js/js_objects.asp
+    </pre>
+    <script>
+        let person ={
+            firstName: "nguyen van",
+            lastName: "anh",
+            age: 21,   
+            eyeColor: "black",  
+            fullName: function(){
+                return this.function + ' ' + this.lastName;
+                },
+           
+            showInfo: function(){
+                let info = '';
+                info += 'tên đầy đủ:' + this.firstName +''+ this.lastName;
+                info += '<br>  tuổi :' + this.age;
+                info += '<br> màu mắt :' + this.eyeColor;
+                return info;
+
+            }
+        }
+            // bên ngoài object
+            // cú pháp 1 phổ biến hơn 
+            // ten_object.ten_thuoc_tinh;
+            document.write ('<br>' + person.firstName);
+            document.write ('<br>' + person.lastName);
+            document.write ('<br>' + person.age);
+            document.write ('<br>' + person.eyeColor);
+            
+            // cú pháp số 2 để gọi thuộc tính của object
+            // ten_object['ten_thuoc_tinh']
+            document.write('<br>' + person['firstname']);
+            document.write ('<br>' + person['lastName']);
+            document.write ('<br>' + person['age']);
+            document.write ('<br>' + person['eyeColor']);
+            
+            // gọi đến phương thức method của object 
+            // viết như thế nào
+            document.write ('<br> goi den method :' );
+            document.write ('<br>' + person.showInfo());
+            document.write ('<br>' + person.fullName());
+
+          
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>
+        
+            Toán:
+            <input type="text" name="Toán" id="monToan" value="">
+        </p>
+        <p>
+            Lý:
+            <input type="text" name="Lý" id="monLy" value="">
+        </p>
+        <p>
+            Hóa:
+            <input type="text" name="Hóa" id="monHoa" value="">
+        </p>
+        <div>
+            <button id="kq">Kết quả</button>
+        </div>
+    <script>
+        document.getElementById('kq').onclick = function(){
+            var a = document.getElementById('monToan') .value;
+            var b = document.getElementById('monLy') .value;
+            var c = document.getElementById('monHoa') .value;
+            a = parseFloat(a);
+            b = parseFloat(b);
+            c = parseFloat(c);
+            var d = a + b + c;
+            if(a <= 1 || b <= 1 || c <= 1 || d < 20) {
+                alert('thi truot');}
+                else{
+                alert('thi do');
+                }
+        };
+    </script> 
+    </div>
+</body>
+</html>

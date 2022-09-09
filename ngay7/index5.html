@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=pre, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        && và => thỏa mãn nhiều điều kiện
+        || hoặc => chỉ cần thỏa mãn 1 trong các điều kiện 
+        ! phủ định
+    </pre>
+    <script>
+        var t = 14;
+        var h = 1.4;
+        var  price;
+        if ((t<14)&& (h<1.4)) {
+            price = 10000;
+        } else {
+            price = 20000;
+        }
+        document.write('gia tien la:' + price);
+
+
+        var a = false;
+            a = 0;
+            a = '';
+            a = -5;
+
+        if (!a) {
+            document.write ("<br>");
+            document.write("a mang gia tri tieu cuc");
+        }
+          // a có thể == true , là 1 số > 0 , chuỗi không rỗng , object , mảng không rỗng 
+          if (a) {
+            document.write("<br>");
+            document.write("a mang giá trị tích cực");
+        }
+
+    </script>
+</body>
+</html>

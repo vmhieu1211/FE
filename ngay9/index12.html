@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" name="keyword" value="">
+    <button id="search">Tìm kiếm</button>
+    
+    <ul>
+        <li >hà nội</li>
+        <li>đà nẵng</li>
+        <li>hồ chí minh</li>
+        <li>vĩnh long</li>
+        <li>cần thơ</li>
+        <li>bắc ninh</li>
+        <li>bắc giang</li>
+        <li>hà giang</li>
+        <li>hà nam</li>
+        <li>nam định</li>
+        <li>thái binh</li>
+        <li>ninh bình</li>
+        <li>thanh hóa</li>
+        <li>nghệ an</li>
+        <li>hà tĩnh</li>
+        <li>huế</li>
+        <li>quảng nam</li>
+        <li>quảng ngãi</li>
+        <li>phú yên</li>
+        <li>lào cai</li>
+        <li>sơn la</li>
+        <li>lạng sơn</li>
+        <li>hải phòng</li>
+        <li>hòa bình</li>
+    </ul>
+
+    <script>
+        // chọn theo id 
+        // document.getElementById('');
+
+        // chọn theo tên thẻ => trả về kiểu dữ liệu HtmlCollection
+        var liTags = document.getElementsByTagName('li');
+        console.log(liTags);
+        console.log(liTags[0].innerHTML);
+        console.log(liTags[0].innerText);
+    </script>
+</body>
+</html>

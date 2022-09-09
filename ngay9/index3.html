@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <pre>
+        dùng vòng lặp for để tự động hóa quá trình sinh ra các thẻ option 
+        cho ngày tháng năm mà ko cần ngồi gõ tay html option
+    </pre>
+    <div id="target">
+        Ngày :
+        <select name="ngay" id="ngay">
+            <option value="1">ngày 1</option>
+            <option value="2">ngày 2</option>
+            <option value="31">ngày 31</option>
+        </select>
+        Tháng :
+        <select name="thang" id="thang">
+            <option value="1">tháng 1</option>
+            <option value="2">tháng 2</option>
+            <option value="12">tháng 12</option>
+        </select>
+        Năm
+        <select name="nam" id="nam">
+            <option value="1922">năm 1922</option>
+            <option value="1923">năm 1923</option>
+            <option value="2022">năm 2022</option>
+        </select>
+    </div>
+        <script>
+           var html_otp_ngay ='';
+            for(var ngay = 1; ngay <= 31; ngay++){
+                html_otp_ngay += '<option value=" '+ngay+' ">' + 'ngày' + ngay + '</option>';
+            }
+            document.getElementById('ngay').innerHTML = html_otp_ngay;
+
+
+            var html_otp_thang ='';
+            for(var thang = 1; thang <= 12; thang++){
+                html_otp_thang += '<option value=" '+ thang +' ">' + 'tháng' + thang + '</option>';
+            }
+            document.getElementById('thang').innerHTML = html_otp_thang;
+
+            var html_otp_nam = ''
+            for(var nam = 1922; nam <=2022 ;nam++){
+                html_otp_nam += '<option value =" ' + nam + '">' + 'năm' + nam + '</option>'
+            }
+            document.getElementById('nam').innerHTML = html_otp_nam;
+
+
+                    </script>
+
+</body>
+</html>

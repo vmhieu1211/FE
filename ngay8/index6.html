@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <form action="">
+            <p>
+                Số ngày : 
+                <input name="day" id="day" type="text" value="" />
+            </p>
+            <p>
+                Loại phòng :
+                <select name="room_type" id="room_type">
+                    <option value="1">Phòng đơn</option>
+                    <option value="2">Phòng đôi</option>
+                    <option value="3">Phòng vip</option>
+                    <option value="4">Phòng đặc biệt</option>
+                </select>
+            </p>
+
+            <p id="tinhTien" onclick="tinhTien()" style="width: 100px; background: gray;color: white">Tính giá thuê phòng</p>
+
+        </form>
+    </div>
+
+    <script>
+        function tinhTien() {
+            var room_type = document.getElementById('room_type').value;
+            var day = document.getElementById('day').value;
+            day = parseFloat(day);
+            //room_type = parseInt(room_type);
+    
+            // tính tiền thuê phòng 
+            // biết giá thuê phòng đơn là 100 nghìn
+            // biết giá thuê phòng đôi là 200 nghìn
+            // biết giá thuê phòng vip là 500 nghìn
+            // biết giá thuê phòng đặc biệt là 1 triệu
+            var price = 0;
+            switch(room_type){
+                case '1':
+                    price = 100000;
+                    break;
+                case '2':
+                    price = 200000;
+                    break;
+                case '3':
+                    price = 500000;
+                    break;
+                case '4':
+                    price = 1000000;
+                    break;
+                default:
+                    alert ('phong khong hop le');
+                
+            }
+            alert(price);
+
+             day = Math.ceil(day);
+            var total = 0;
+            total = day*price;
+            alert('bạn phải thanh toán : ' + total);
+            
+
+
+
+            // nếu lẻ ngày ví dụ 3.1 thì tính là 4 ngày 
+
+            // hãy alert() ra giá thuê phòng cuối cùng
+            // chú ý không được dùng if else phải dùng switch case 
+
+            // làm tròn thì đọc thêm bài này 
+            // https://www.w3schools.com/js/js_math.asp
+            // 3.1 tính tiền là 4 ngày 
+
+        }
+    </script>
+    
+</body>
+</html>

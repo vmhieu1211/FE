@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <pre>
+        hàm trong js có tên
+        function TenHam() {
+            // nội dung của hàm
+        }
+
+        hàm vô danh 
+        function() {
+
+        }
+
+        // hàm với tham số đầu vào và output đầu ra 
+        // hàm có input và ouput 
+        // nồi cơm điện thì input là điện, nước , gạo 
+        // output của nồi cơm điện là cơm 
+
+        // soA và soB là 2 param tham số đầu vào 
+        // return cuối hàm là lệnh kết thúc hàm và trả về kết quả output
+        function tinhTong(soA,soB){
+            var c = soA + soB;
+            // output 
+            return c;
+        }
+
+        // hàm có param mặc định
+        function tinhTong(soA = 1,soB = 1){
+            var c = soA + soB;
+            // output 
+            return c;
+        } 
+    </pre>
+    <div>
+        <p>
+            Toán : 
+            <input type="text" name="toan" id="monToan" value="">
+        </p>
+        <p>
+            Lý : 
+            <input type="text" name="ly" id="monLy" value="">
+        </p>
+        <p>
+            Hóa : 
+            <input type="text" name="hoa" id="monHoa" value="">
+        </p>
+        <p>
+            <button id="kq">Kết quả</button>
+        </p>
+    </div>
+
+    <script>
+        function tinhDiem(toan = 0, ly = 0, hoa = 0, diemPass= 20, diemLiet = 1)
+        {
+            var t= parseFloat(toan) + parseFloat(ly) + parseFloat(hoa);
+            diemPass = parseFloat(diemPass);
+            diemLiet = parseFloat(diemLiet);
+            var response ='';
+       
+        if(toan <=diemLiet || ly <= diemLiet || hoa <= diemLiet || t < diemPass){
+            response='thi do';
+
+        }
+        else
+        {
+            response='thi truot';
+        }
+        return response
+    }
+        var test1 = tinhDiem();
+        var test2 = tinhDiem(7,8,9);
+        var test3 = tinhDiem(7,8,9,25,2);
+        console.log(test1)
+        console.log(test2)
+        console.log(test3)
+        
+      
+        // gọi event
+        document.getElementById('kq').onclick = function(){
+                    var a = document.getElementById('monToan').value;
+                    var b = document.getElementById('monLy').value;
+                    var c = document.getElementById('monHoa').value;
+                    var res = tinhDiem(a,b,c);
+                    alert(res);
+                }
+        </script>
+</body>
+</html>

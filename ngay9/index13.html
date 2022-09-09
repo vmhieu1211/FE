@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        mảng trong js
+    </pre>
+
+    <ul id="pro1">
+    </ul>
+
+    <ul id="pro2">
+    </ul>
+
+
+    <script>
+        var province1 = ['hà nội', 'đà nẵng', 'hồ chí minh'];
+        var province2 = new Array('hà nội', 'đà nẵng', 'hồ chí minh');
+        console.log(province1);
+        console.log(province2);
+
+        // gán lại giá trị cho 1 phần tử 
+        province1[0] ='HA NOI';
+
+        // thêm 1 phần tử mới vào 
+        province1[3] ='hai phong';
+        console.log(province1);
+
+
+        var htmlPro = '';
+        htmlPro += '<li>' + province1[0] + '</li>';
+        htmlPro += '<li>' + province1[1] + '</li>';
+        htmlPro += '<li>' + province1[2] + '</li>';
+        htmlPro += '<li>' + province1[3] + '</li>';
+        document.getElementById('pro1').innerHTML = htmlPro;
+
+        var html2 = '';
+        // đếm số phần tử trong mảng 
+        for (var i = 0;i < province1.length ;i++) {
+            html2 += '<li>' + province1[i] + '</li>';
+        }
+        document.getElementById('pro2').innerHTML = html2;
+        
+
+
+    </script>
+</body>
+</html>

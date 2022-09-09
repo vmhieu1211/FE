@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.site-wrap{
+    width: 100%;
+}
+
+.site-wrap *{
+    box-sizing: border-box;
+}
+.site-wrap .header{
+    width: 100%;
+    height: 896px;
+    background: linear-gradient(180deg, #6F7DFB 0%,#26308C 100%);
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);;
+}
+.top-header{
+    margin: 60px 32px 58px 32px;
+    height: 42px;
+    display: flex;
+    justify-content: space-between; 
+}
+
+.top-header .logo{
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 125%;
+    color: #FFFFFF
+}
+.intro{
+    margin-left: 32px;
+    margin-right: 32px;
+}
+
+.intro .intro-title{
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 125%;
+    color: #FFFFFF;
+}
+
+.intro .intro-desc{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 200%;
+    color: #FFFFFF;
+    margin-top: 16px;
+}
+
+.enroll-btn{
+    margin-top: 34px;
+    width: 171px;
+    height: 48px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:#DA722C;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.sub{
+    margin-top: 21px;
+    height: 399px;
+    background: url("assets/images/girl.png") no-repeat   bottom right;
+    position: relative;
+}
+.enroll{
+    width: 192px;
+    height: 84px;
+    background: linear-gradient(180deg, #6F7DFB 0%, #3B448F 100%);
+    border-radius: 24px;
+    position:absolute;
+    top: 125px;
+    left: 29px;}
+
+.enroll-1{
+    width: 182px;
+    height: 75px;
+    background:#FFFFFF;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.enroll-1 .sub-32{
+    width: 56px;
+    height: 38px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 125%;
+    color: #023047;
+}
+.enroll-1 .st-info{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 125%;
+    color: #023047; }
+   
+.rating{
+    width: 192px;
+    height: 84px;
+    background: linear-gradient(180deg, #6F7DFB 0%, #3B448F 100%);
+    border-radius: 24px;
+    position: absolute;
+    top: 257px;
+    left: 29px;}
+
+.rating-1{
+    width: 182px;
+    height: 75px;
+    background: #FFFFFF;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.rating-1 .rating-star{
+    width: 56px;
+    height: 38px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 125%;}
+.star{
+   
+}
+
+.rating-1 .or-info{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 125%;
+    color: #023047;
+}
+
+
+
+/*content*/
+.content{
+    width: 100%;   
+}
+.content *{
+    box-sizing: border-box;
+    margin-left: 32px;
+    margin-right: 32px;
+}
+
+.say-box{
+    width: 100%;
+    height: 780px;
+    border: 1px solid #FFFFFF;
+   
+}
+
+.say-box .say-title{
+    margin-top: 100px;
+    width: 100%;
+    height: 36px;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 120%;
+    color: #023047;
+}
+.say-box .say-intro{
+    margin-top: 12px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 200%;
+    height: 128px;
+    color: #023047;
+}
+.student-say-content{
+    margin-top: 40px;
+    height: 484px;
+
+}
+.student-item{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    background: #FFFFFF;
+    box-shadow: 0px 9px 36px rgba(0, 0, 0, 0.2);
+    border-radius: 24px;
+    }
+.item-title{
+    margin-top: 71px;
+}

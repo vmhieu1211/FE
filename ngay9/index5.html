@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        while (condition) {
+            // code block to be executed
+        }
+
+        while (điều kiện chạy vòng lặp) {
+           code thực thi của vòng lặp 
+        }
+
+        với các vòng lặp chú ý 3 yếu tố :
+        1 - sự khởi đầu của biến đếm 
+        2 - điều kiện chạy vòng lặp 
+        3 - sự thay đổi của biến đếm sau mỗi lần chạy của vòng lặp 
+    </pre>
+
+    <script>
+        // in các số 1 đến 10 
+        var i = 1;
+        while(i <= 10) {
+            document.write('<p>' + i +  '</p>');
+
+            i++;
+        } // end while
+
+        // viết tỉnh tổng 1 đến 100 dùng vòng lặp while 
+        var i = 1
+        var tong = 0;
+        while( i <= 100){
+            tong += i;
+            i++
+        } //end while
+        alert('Tong:' + tong);
+    </script>
+</body>
+</html>
