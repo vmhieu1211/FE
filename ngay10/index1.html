@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        vòng lặp forEach
+        truyền vào vòng lặp này 1 function 
+    </pre>
+
+    <script>
+        var cities = ['ha noi' , 'da nang' , 'hai phong', 'ho chi minh'];
+            if(cities.length){
+                document.write('<ul>');
+                cities.forEach(function(value){
+                    document.write('<li>' + value + '</li>');
+
+                });
+                document.write('</ul>');
+            }
+            document.write('<hr />');
+            function writeList(value) {
+            document.write('<li>' + value + '</li>');
+        }
+
+        if (cities.length) {
+            document.write('<ul>');
+            cities.forEach(writeList);
+            document.write('</ul>');
+        }
+
+    </script>
+</body>
+</html>

@@ -19,13 +19,14 @@
     <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>            
     <table class="table">
       <thead>
-        <tr>
+        <tr id="tableHead">
           <th>Cột 1</th>
           <th>Cột 2</th>
           <th>Cột 3</th>
+          
         </tr>
       </thead>
-      <tbody>
+      <tbody id = "contentTable">
         <tr>
           <td>Cột 1 hàng 1</td>
           <td>Cột 2 hàng 1</td>
@@ -46,15 +47,43 @@
         <br>
         Số hàng ngang : <input type="text" id="row" name="row" value="1">
 
-        <button id="generate">Sinh bảng</button>
+        <button id="generate" onclick="generateTable()">Sinh bảng</button>
     </div>
 
     <div id="target">
         Lát nữa gắn bảng sinh tự động vào trong thẻ div#target này
         <script>
-            for(var col = 1; col <= 12;col++){     
-                        
+            function generateTable() {
+                var col = document.getElementById("col").value;
+                var row = document.getElementById("row").value;
+                col = parseInt(col);
+                row = parseInt(row);
+
+            console.log('col:' + col);
+            console.log('row:' + row);
+            
+            var html = '';
+            for (var i =1; i <= row; i++){
+                html += '<tr>';
+                for(var j=1;j<=col;j++){
+                    html += '<td>' + ' Cột ' + j + 'Hàng' + i +'</td>';
+
+                }
+                html += '</tr>'
             }
+            console.log(html);
+            document.getElementById("contentTable").innerHTML =html;
+
+            var htmlTh ='';
+            for (var t = 1; t <= col; t++){
+                htmlTh += '<th>' + 'Cột' +  t + '</th>';
+            }
+            document.getElementById("tableHead").innerHTML = htmlTh;
+
+
+            }
+                        
+        
         </script>
     </div>
   </div>

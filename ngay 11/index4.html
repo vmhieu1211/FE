@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        JSON https://www.w3schools.com/js/js_json.asp
+        JSON is a format for storing and transporting data.
+        JSON is often used when data is sent from a server to a web page.
+
+        JSON là định dạng cho việc lưu trữ và trao đối dữ liệu .
+        JSON thường được dùng khi dữ liệu được từ server đến 1 trang web . 
+
+        {
+            "employees":[
+              {"firstName":"John", "lastName":"Doe"},
+              {"firstName":"Anna", "lastName":"Smith"},
+              {"firstName":"Peter", "lastName":"Jones"}
+            ]
+        }
+    </pre>
+
+    <script>
+        var person = {firstName: "John", lastName: "Doe", age: 21, address: "london england"};
+        // đối tượng object trong js
+        console.log(person);
+        // chuyển object js này về dạng json 
+        var personJson = JSON.stringify(person);
+        console.log(personJson);
+
+        // chuyển ngược lại từ format JSON => object js 
+        var revertObj = JSON.parse(personJson);
+
+        console.table(revertObj);
+
+
+    </script>
+</body>
+</html>

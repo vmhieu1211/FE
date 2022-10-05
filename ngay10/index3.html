@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div style="color:red" id="tet">?</div>
+
+    <script>
+        // đoạn js tính xem còn bao nhiêu ngày nữa là tết dương
+        // 1-1-2023
+
+        // A = thoi gian hien tai 
+        // B = 1-1-2023
+        // C = B - A
+        // C đổi về ngay C1
+        var a = new Date();
+        document.write('human read : ' + a);
+        var a1 = a.getTime();
+        document.write('<br> timestamp : ' + a1);
+        var b = new Date("2023-01-01");
+        document.write('<br> b: ' + b);
+        var b1 = b.getTime();
+        document.write('<br> b1: ' + b1);
+        var c = b1-a1;
+        document.write('<br> c: ' + c );
+        // đổi ms về ngay 
+        var c1 = c/(1000*60*60*24);
+        document.write('<br> c1: ' + c1 );
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <pre>
+        https://www.w3schools.com/js/js_string_templates.asp
+
+        js string template 
+        dùng 1 chuỗi js dùng '1 chuỗi' hay "1 chuỗi"
+        es6 có khái niệm template string : `nháy này là nút nằm bên tay trái cạnh phím số 1`
+    </pre>
+
+    <script>
+
+       /*  let text = 'The quick
+            brown fox
+            jumps over
+            the lazy dog'; */
+
+            // có 1 chuỗi có nhiều dòng thì nên dùng `` để chứa chuỗi đó thay vì dùng '' hay ""
+            let text = `The quick
+            brown fox
+            jumps over
+            the lazy dog`;
+
+            let firstName = "John";
+            let lastName = "Doe";
+            let html1 = '<p>' + firstName + ' ' + lastName + '<p>';
+            document.write(html1);
+
+            // dùng ${ten_bien}
+            let html2 = `<p>${firstName} ${lastName}</p>`;
+            document.write(html2);
+
+
+
+    </script>
+    
+</body>
+</html>

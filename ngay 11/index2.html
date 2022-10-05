@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .parent .child {}
+
+</style>
+<body>
+    <div class="parent">
+        <div class="child">
+            Child 1 trong parent
+        </div>
+        <div class="child">
+            Child 2 trong parent
+        </div>
+        <div class="child">
+            Child 3 trong parent
+        </div>
+    </div>
+    <div class="child">
+        Child ngoài parent
+    </div>
+    <script>
+        //document.getElementById(): chọn theo ID
+        //chọn theo class : document.getElementsByClassName()
+        //chọn theo thẻ tên html : document.getElementsByTagName()
+        // querySelector chỉ trả về select đầu tiên thỏa mãn bộ chọn 
+        document.querySelector(".parent .child").style.color = 'red';
+    </script>
+</body>
+</html>

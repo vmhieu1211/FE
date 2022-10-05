@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- cài đặt jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <pre>
+        thêm bớt các thẻ html vào trang thông qua javascript
+
+        https://www.w3schools.com/jquery/jquery_dom_add.asp
+    </pre>
+
+    <!-- before thêm ở trước thẻ mở bên ngoài của thẻ -->
+    <form action="">
+        <!-- vị trí prepend thêm nội dung vào -->
+        <p>
+            Tên sinh viên : <input type="text" name="students[]" id="student-name-1" value="" />
+            Tuổi sinh viên : <input type="text" name="age[]" id="student-age-1" value="" />
+            Địa chỉ sinh viên : <input type="text" name="address[]" id="student-address-1" value="" />
+        </p>
+        <!-- vị trí append thêm nội dung vào trước thẻ đóng -->
+    </form>
+    <!-- after thêm ở sau thẻ đóng bên ngoài -->
+
+    <button id="add">Thêm sinh viên</button>
+
+    <script>
+        $(document).ready(function(){
+            $("#add").on("click", function(){
+                var htmlAppend = '<p>';
+                    htmlAppend += 'Tên sinh viên : <input type="text" name="students[]" id="student-name-1" value="" />';
+                    htmlAppend += 'Tuổi sinh viên : <input type="text" name="age[]" id="student-age-1" value="" />';
+                    htmlAppend += 'Địa chỉ sinh viên : <input type="text" name="address[]" id="student-address-1" value="" />';
+                    htmlAppend += '</p>';
+                $("form").append(htmlAppend);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .parent .child {
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="parent">
+        <div class="child">
+            Child 1 trong parent
+        </div>
+        <div class="child">
+            Child 2 trong parent
+        </div>
+        <div class="child">
+            Child 3 trong parent
+        </div>
+    </div>
+
+    <div class="child">
+        Child ngoài parent
+    </div>
+    
+    <script>
+         // querySelector chỉ trả về selector đầu tiên thỏa mãn bộ chọn 
+        // querySelectorAll trả về tất cả selector thỏa mãn
+
+        var demo = document.querySelectorAll(".parent .child");
+        console.log(demo);
+
+        // querySelectorAll trả về dạng nodeList số nhiều
+       /*  document.querySelectorAll(".parent .child")[0].style.color = 'red';
+        document.querySelectorAll(".parent .child")[1].style.color = 'red';
+        document.querySelectorAll(".parent .child")[2].style.color = 'red'; */
+
+        for(var i = 0;i < demo.length; i++) {
+            document.querySelectorAll(".parent .child")[i].style.color = 'red';
+        }
+        
+        
+
+    </script>
+</body>
+</html>

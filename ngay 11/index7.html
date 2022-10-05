@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- cài đặt jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <pre>
+        https://www.w3schools.com/jquery/default.asp
+        thư viện jquery của js 
+
+        cài đặt jquery 
+
+        https://www.w3schools.com/jquery/jquery_selectors.asp
+
+        https://www.w3schools.com/jquery/jquery_events.asp
+    </pre>
+
+    <ul>
+        <li>Ha noi</li>
+        <li>Ho chi minh</li>
+        <li>Da nang</li>
+    </ul>
+
+    <button id="showBtn">Show</button>
+    <button id="hideBtn">Hide</button>
+
+    <script>
+        // khi tất cả các thẻ html được load xong thì sẽ được chạy với document ready 
+        
+
+        // chú ý : muốn dùng được jquery thì phải đảm bảo đã cài đặt thư viện jquery 
+        $(document).ready(function() {
+            // nội dung của function sau khi dom html được load xong 
+
+            // khái niệm jquery selector
+            // document.getElementById("showBtn")
+            // $("css selector")
+            $("#showBtn").on("click", function(){
+                $("ul").css("display", "block");
+            });
+
+            $("#hideBtn").on("click", function(){
+                $("ul").css("display", "none");
+            });
+
+        });
+    </script>
+
+</body>
+</html>

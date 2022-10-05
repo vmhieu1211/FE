@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- cài đặt jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+    <pre>
+        ajax là kỹ gửi dữ liệu đến server hoặc lấy dữ liệu từ server về trang html mà không cần tải lại trang 
+        tham khảo : https://smoothprogramming.com/jquery/jquery-ajax-cheatsheet/
+        https://cheatography.com/dwapi/cheat-sheets/jquery-and-javascript-ajax-quick-reference/
+    </pre>
+
+    <button id="fetchPhoto">Lấy danh sách user</button>
+
+    <div class="container mt-3">
+        <h2>Basic Table</h2>
+        <p>The .table class adds basic styling (light padding and horizontal dividers) to a table:</p>            
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+            </tr>
+          </thead>
+          <tbody>
+           
+          </tbody>
+        </table>
+      </div>
+
+    <script>
+        $(document).ready(function(){
+            // gán sự kiện cho #fetchPhoto
+            $("#fetchPhoto").on("click", function(){
+                $.ajax({  
+                    url: "https://jsonplaceholder.typicode.com/users",
+                    type: "get",
+                    contentType: "application/json",
+                    // kiểu dữ liệu trả về là json
+                    dataType: "json",
+                    success: function(result,status,xhr){
+                        // object
+                        // đang là kiểu chuỗi json phải chuyển đổi json -> js object
+                        // đã là object js thì dùng vòng lặp lặp sinh ra chuỗi html 
+                        console.log(result);
+                    
+                        var html = '';
+
+                        for(var i = 0; i < result.length; i++) {
+                            console.log(result[i]);
+                            html += '<tr>';
+                            html += '<td>' + result[i].id + '</td>';
+                            html += '<td>' + result[i].name + '</td>';
+                            html += '<td>' + result[i].email + '</td>';
+                            html += '<td>' + result[i].phone + '</td>';
+                            html += '</tr>';
+                        }
+                        /* result.forEach(element => {
+                            console.log(element);
+                            html += '<tr>';
+                            html += '<td>' + element.id + '</td>';
+                            html += '<td>' + element.name + '</td>';
+                            html += '<td>' + element.email + '</td>';
+                            html += '<td>' + element.phone + '</td>';
+                            html += '</tr>';
+                        }); */
+                       
+                        $("tbody").append(html);
+
+
+                    }
+                });
+            });
+        });
+    </script>
+    
+</body>
+</html>

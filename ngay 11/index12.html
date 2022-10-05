@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        hàm mũi tên arrow function 
+        https://www.w3schools.com/js/js_arrow_function.asp
+    </pre>
+
+    <script>
+        // hàm thông thường
+        function tinhTong(a, b){
+            var c = a + b;
+            return c;
+        }
+
+        // gán hàm cho 1 biến 
+        hello = function() {
+            document.write("Hello World!");
+        }
+        // gọi hàm được gán cho biến hello 
+        hello();
+
+        var tinhTong1 = function(a, b){
+            var c = a + b;
+            return c;
+        };
+
+        //
+        var kq = tinhTong1(1,2);
+        document.write('<br> kq : ' + kq);
+
+        // () => {} dạng arrow function 
+        helloArrow = () => {
+            document.write("Hello World!");
+        }
+
+        var tinhTongArrow = (a, b) => {
+            var c = a + b;
+            return c;
+        };
+
+        var kqArrow = tinhTongArrow(3,2);
+        document.write('<br> kqArrow : ' + kqArrow);
+
+    </script>
+</body>
+</html>

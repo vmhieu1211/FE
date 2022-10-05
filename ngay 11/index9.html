@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        thêm thẻ html vào trang web thông qua js thuần 
+    </pre>
+
+    <div id="target" style="padding: 20px;border: 1px solid orange;">
+        <p style="color:red" class="child">the p so 1</p>
+    </div>
+
+    <button onclick="add()">Add</button>
+
+    <script>
+        function add() {
+            // đếm số thẻ p trong #target
+            var countP = document.querySelectorAll("#target p");
+            // countP dạng nodeList
+            var numP = parseInt(countP.length);
+
+            // tạo ra 1 thẻ html bằng cú pháp document.createElement("h1")
+            // document.createElement("div")
+            // tạp ra 1 thẻ p rỗng sau đó gán cho biến para
+            const para = document.createElement("p");
+            // gán nội dung text vào trong thẻ p thông qua biến para
+            para.innerText = "the p so " + (numP+1);
+            para.style.color = 'red';
+            para.classList.add("child");
+            var target = document.getElementById('target');
+            target.appendChild(para);
+
+        }
+    </script>
+</body>
+</html>
